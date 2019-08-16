@@ -1,25 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Irf-CU-dog">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--bienvenida-->
+        <scene sceneID="kck-En-V8H">
+            <objects>
+                <viewController id="zZF-lI-6cE" userLabel="bienvenida" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Wy-FU-1rC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rz-Tj-Vcb">
+                                <rect key="frame" x="179" y="389" width="56" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Ingresar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6VG-Ad-wnf" kind="show" id="1pQ-ir-kj9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4rz-Tj-Vcb" firstAttribute="centerX" secondItem="3Wy-FU-1rC" secondAttribute="centerX" id="TIL-mW-FzY"/>
+                            <constraint firstItem="4rz-Tj-Vcb" firstAttribute="centerY" secondItem="3Wy-FU-1rC" secondAttribute="centerY" id="yc5-FZ-jG3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="End-hO-UBU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bienvenida" largeTitleDisplayMode="never" id="6AQ-Hc-jVW">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="0Gc-pP-taP"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxj-JW-y3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="116"/>
+        </scene>
+        <!--borussia-->
+        <scene sceneID="6g9-ge-4VK">
+            <objects>
+                <viewController id="6VG-Ad-wnf" userLabel="borussia" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IeR-kS-jiA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.87199067321625146" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="o9b-Jj-XkZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Borussia" largeTitleDisplayMode="never" id="k0C-XQ-gTr">
+                        <barButtonItem key="rightBarButtonItem" title="Cerrar" id="4K6-Lf-bN9">
+                            <connections>
+                                <segue destination="iM2-77-HBV" kind="unwind" unwindAction="unwindToPortadaWithUnwindSegue:" id="yXJ-ay-PI7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMi-Yx-Mx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iM2-77-HBV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2718.840579710145" y="115.84821428571428"/>
+        </scene>
+        <!--portada-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" id="OWY-rB-JdS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="BYZ-38-t0r" userLabel="portada" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3LC-mh-Rjw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo" translatesAutoresizingMaskIntoConstraints="NO" id="4zo-oH-vge">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jK-jh-xHG">
+                                <rect key="frame" x="179" y="530" width="56" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Ingresar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zZF-lI-6cE" kind="show" id="pBD-KU-yvS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zat-M3-BdN" firstAttribute="bottom" secondItem="9jK-jh-xHG" secondAttribute="bottom" constant="162" id="1TU-me-bro"/>
+                            <constraint firstItem="4zo-oH-vge" firstAttribute="leading" secondItem="3LC-mh-Rjw" secondAttribute="leading" id="C6a-S5-MzX"/>
+                            <constraint firstAttribute="bottom" secondItem="4zo-oH-vge" secondAttribute="bottom" id="M4h-UK-ZIW"/>
+                            <constraint firstItem="9jK-jh-xHG" firstAttribute="centerX" secondItem="3LC-mh-Rjw" secondAttribute="centerX" id="QEK-UQ-qYC"/>
+                            <constraint firstAttribute="trailing" secondItem="4zo-oH-vge" secondAttribute="trailing" id="sCd-Qs-C4q"/>
+                            <constraint firstItem="4zo-oH-vge" firstAttribute="top" secondItem="3LC-mh-Rjw" secondAttribute="top" id="u2W-UP-oCP"/>
+                            <constraint firstItem="9jK-jh-xHG" firstAttribute="centerX" secondItem="3LC-mh-Rjw" secondAttribute="centerX" id="xfR-Ye-r0B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zat-M3-BdN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Portada" id="JIa-Wx-pKU">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="OSd-HB-PcT"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ocd-6f-pJA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Irf-CU-dog" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Q3V-za-QWT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r3t-HD-kOo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZg-4A-Ece" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
